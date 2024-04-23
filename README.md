@@ -3,11 +3,11 @@
 ## to (Destino de navegación):
 Representa la ruta a la que el usuario intenta navegar.
 Es un objeto que contiene información sobre la ruta objetivo, incluyendo:
-    * name: Nombre de la ruta definida (si existe)
-    * path: Ruta de la ruta (ej. /usuarios/:id)
-    * params: Objeto que contiene parámetros de la ruta (ej. { id: 123 } para /usuarios/123)
-    * query: Objeto que contiene parámetros de consulta (ej. { search: 'termino' } para /buscar?search=termino)
-    * Otras propiedades específicas de la configuración de la ruta (ej. hash, fullPath, meta)
+* name: Nombre de la ruta definida (si existe)
+* path: Ruta de la ruta (ej. /usuarios/:id)
+* params: Objeto que contiene parámetros de la ruta (ej. { id: 123 } para /usuarios/123)
+* query: Objeto que contiene parámetros de consulta (ej. { search: 'termino' } para /buscar?search=termino)
+* Otras propiedades específicas de la configuración de la ruta (ej. hash, fullPath, meta)
 
 ## from (Origen de navegación):
 Representa la ruta en la que se encuentra el usuario actualmente (o la ruta en la que estaba antes de iniciar la navegación).
@@ -16,9 +16,9 @@ Tiene la misma estructura que to, proporcionando información sobre la ruta actu
 ## next (Callback de navegación):
 Función que debes llamar para continuar o abortar la navegación.
 Ofrece varias opciones para controlar el flujo de navegación:
-    * next(): Permite que la navegación continúe hacia la ruta objetivo (to).
-    * next(false): Cancela la navegación y el usuario permanece en la ruta actual (from).
-    * next('/'): Redirige al usuario a una ruta diferente (especificada por la ruta). También puedes usar rutas con nombre o proporcionar un objeto con path, query, etc.
+* next(): Permite que la navegación continúe hacia la ruta objetivo (to).
+* next(false): Cancela la navegación y el usuario permanece en la ruta actual (from).
+* next('/'): Redirige al usuario a una ruta diferente (especificada por la ruta). También puedes usar rutas con nombre o proporcionar un objeto con path, query, etc.
 
 
 # Las Stores y los Composables 
