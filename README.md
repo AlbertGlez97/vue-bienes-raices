@@ -35,7 +35,11 @@ son dos enfoques diferentes para manejar el estado de la aplicación y la lógic
 * Uso: Los Composables son funciones JavaScript que pueden contener lógica de estado, operaciones asíncronas, acceso a APIs externas, validaciones, entre otras funcionalidades. Se utilizan dentro de los componentes de Vue para reutilizar la lógica y mantener los componentes más simples y enfocados en la presentación.
 * Ventajas: Reutilización de lógica entre componentes, separación clara entre la interfaz de usuario y la lógica de negocio, mayor modularidad y facilidad para probar y mantener el código.
 
-En resumen, los Stores de Vuex son adecuados para la gestión del estado global y complejo de la aplicación, especialmente en aplicaciones de tamaño medio a grande, donde se necesita un control centralizado del estado y la gestión de acciones asíncronas. Por otro lado, los Composables son útiles para encapsular la lógica de negocio relacionada en funciones reutilizables dentro de componentes funcionales, lo que facilita la modularidad y la separación de preocupaciones en la aplicación.
+### En resumen:
+
+* Composables: Se centran en la reutilización de lógica entre componentes, ideal para comportamientos específicos que quieres compartir, como el manejo de formularios, validaciones, interacciones con APIs, etc. No están inherentemente ligados al estado global de la aplicación, aunque pueden interactuar con él.
+
+* Pinia/State Management: Se centra en el manejo del estado global, permitiendo que múltiples componentes compartan y modifiquen este estado de manera reactiva. Es esencial para el flujo de datos en aplicaciones grandes donde el estado necesita ser accesible globalmente y mutado de manera controlada.
 
 
 

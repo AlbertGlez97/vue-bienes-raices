@@ -15,6 +15,11 @@ const router = createRouter({
       name: 'home', // Nombre de la ruta
       component: HomeView // Componente asociado a la ruta
     },
+     {
+      path: '/propiedades/:id', // Ruta para mostrar la propiedad
+      name: 'propiedad', // Nombre de la ruta
+      component: () => import('../views/PropiedadView.vue') // Componente asociado a la ruta
+    },
     {
       path: '/login', // Ruta para la página de inicio de sesión
       name: 'login', // Nombre de la ruta
@@ -27,17 +32,17 @@ const router = createRouter({
       meta: { requiresAuth: true }, // Metadatos que indican que se requiere autenticación para acceder
       children: [ // Rutas hijas del panel de administración, se puede llamar "anidación" o "anidar rutas"
         {
-          path: '/admin/propiedades',
+          path: 'propiedades',
           name: 'admin-propiedades',
           component: () => import('../views/admin/AdminView.vue')
         },
         {
-          path: '/admin/nueva',
+          path: 'nueva',
           name: 'nueva-propiedad',
           component: () => import('../views/admin/NuevaPropiedadView.vue')
         },
         {
-          path: '/admin/editar/:id',
+          path: 'editar/:id',
           name: 'editar-propiedad',
           component: () => import('../views/admin/EditarPropiedadView.vue')
         },

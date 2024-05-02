@@ -27,6 +27,30 @@ export const validationSchema = {
     descripcion (value) {
       if (value) return true
       return 'Agrega una Descripción'
+    },
+    pais (value) {
+      if (value) return true
+      return 'Selecciona un Pais'
+    },
+    estado (value) {
+      if (value) return true
+      return 'Selecciona un Estado'
+    },
+    ciudad (value) {
+      if (value) return true
+      return 'Selecciona una Ciudad'
+    },
+    calle (value) {
+      if (value) return true
+      return 'Agrega una calle'
+    },
+    codigoPostal (value) {
+      if (value) return true
+      return 'Agrega un Codigo Postal'
+    },
+    colonia (value) {
+      if (value) return true
+      return 'Agrega una Colonia'
     }
 } 
   
